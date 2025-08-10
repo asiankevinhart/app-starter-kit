@@ -1,5 +1,9 @@
-import streamlit as st
+import os
 
-st.title('🎈 App Name')
-
-st.write('Hello world!')
+test_path = r"G:\My Drive\Zapier Watch\test.txt"
+try:
+    with open(test_path, "w") as f:
+        f.write("test")
+    print("Write successful")
+except Exception as e:
+    print(f"Error writing file: {e}")
